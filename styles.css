@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #ffcccc, #ffe6e6); /* Romantic background */
+}
+
+.background {
+    position: relative; /* Allow absolute positioning of GIFs */
+}
+
+.gif_container {
+    position: absolute; /* Position GIFs relative to the background */
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent mouse events on GIFs */
+}
+
+.gif {
+    position: absolute;
+    width: 100px; /* Size of GIFs */
+    height: auto;
+}
+
+#top-left {
+    top: -70px; /* Increased space above the calculator */
+    left: -70px; /* Increased space to the left of the calculator */
+    margin: -190px;
+    padding-top:375px;
+    width: 200px;
+}
+
+#top-right {
+    top: -70px; /* Increased space above the calculator */
+    right: -70px; /* Increased space to the right of the calculator */
+    padding-top:375px;
+    width:200px;
+    margin:-190px;
+}
+
+#bottom-left {
+    bottom: -120px; /* Increased space below the calculator */
+    left: -70px; /* Increased space to the left of the calculator */
+    margin-left: 200px;
+    margin-top:10%;
+    width:100px;
+}
+
+#bottom-right {
+    top: -120px; /* Increased space below the calculator */
+    right: -70px; /* Increased space to the right of the calculator */
+    margin-right:200px;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    outline: none;
+    position: relative; /* Reference for positioning GIFs */
+    z-index: 1; /* Bring the calculator above the GIFs */
+}
+
+.display {
+    background: #ffe1e1;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid #ff6f61;
+    min-height: 50px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttons button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.buttons button:hover {
+    background: #ff4f47;
+}
+
+.compliment {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ff4f47;
+    text-align: center;
+    font-weight: bold;
+}
